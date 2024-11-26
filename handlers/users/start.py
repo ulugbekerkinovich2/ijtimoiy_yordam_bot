@@ -201,7 +201,7 @@ async def handle_category_selection(callback_query: types.CallbackQuery, state: 
 
     # Foydalanuvchidan qo'shimcha ma'lumot olish uchun xabar so'rash
     await Form.message.set()  # Holatni "message"ga o'zgartiramiz
-    await callback_query.message.answer(f"Siz tanlagan yordam turi: {category_name}\nIltimos, batafsil ma'lumotni kiriting.", reply_markup=ReplyKeyboardRemove())
+    await callback_query.message.answer(f"Siz tanlagan yordam turi: {category_name}\nSizga qanday yordam kerak, batafsil ma'lumotni kiriting.", reply_markup=ReplyKeyboardRemove())
     await callback_query.answer()
 
 @dp.message_handler(state=Form.message)
